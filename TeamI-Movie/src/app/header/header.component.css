@@ -1,0 +1,36 @@
+.total{
+    background-color: burlywood;
+}
+
+.im1{
+    width: 100px;
+    height: 100px;
+    margin-left: 50px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    box-sizing: border-box;
+}
+.im2{
+    width: 300px;
+    height: 300px;
+    margin-left: 50px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    box-sizing: border-box;
+    border-radius: 50%;
+}
+.line{
+    display: inline;
+    font-family: 'Sofia';font-size: 50px;
+    color: rgb(240, 57, 11);
+}
+.form-inline{
+    display: inline;
+    margin-left: 600px;
+    box-sizing: border-box;
+}
+.headline{
+    background-color: rgb(243, 178, 0);
+    height: 20%;
+
+}
