@@ -1,0 +1,82 @@
+
+  <!-- <a  href="#">Navbar</a> -->
+   <nav class="navbar navbar-expand-lg sticky-top navbar-light bg-secondary">
+    <a class="navbar-brand" routerLink="/merchandiseMainPage">
+      <img src="\assets\images\ff2.jpg" style="width: 150px;height: 100%;" alt="Logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item " >
+          <a class="nav-link" routerLink="/merchandiseMainPage" style="color: #ffba37;">Fit 'N' Filmholics <i class="fas fa-user-secret"></i> <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item " >
+          <a class="nav-link" href="#" style="color: #ffba37;">CinemaPedia <i class="fas fa-film"></i> <span class="sr-only">(current)</span></a>
+        </li>
+    
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #ffba37;">
+            Categories
+          </a>
+          <div class="dropdown-menu " aria-labelledby="navbarDropdown">
+            <!-- <a class="dropdown-item" href="#">Action</a> -->
+            <a style="color: #ffba37;" class="dropdown-item nav-warning  "
+               (click)="getunisexAPI()">
+               Tees <i class="ml-5 fas fa-tshirt"></i> 
+            </a>
+            <div class="dropdown-divider"></div>
+            <!-- <a class="dropdown-item" href="#">Another action</a> -->
+            <a style="color: #ffba37;" class="dropdown-item nav-warning   "
+               (click)="getpostersAPI()">
+                  Posters <i class="ml-3 fas fa-print"></i>
+            </a>
+            <div class="dropdown-divider"></div>
+            <!-- <a class="dropdown-item" href="#">Something else here</a> -->
+            <a style="color: #ffba37;" class="dropdown-item nav-warning  "
+               (click)="getaccessoriesAPI()" >
+                 Accessories <i class=" fas fa-cog"></i>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a style="color: #ffba37;" class="dropdown-item nav-warning  "
+               (click)="getcskAPI()">
+                  CSK <i class="ml-5 fas fa-crown"></i> 
+            </a>
+          </div>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </li> -->
+        <li class="nav-item">
+          <a class="nav-link" style="color: #ffba37;" routerLink="/track"><span> Track My Order <i class="fa fa-map" aria-hidden="true"></i></span></a>
+        </li>
+      </ul>
+      <div class="form-inline my-2 my-lg-0">
+        <!-- <div class="pt-2 px-3 nav-item">
+          <a class="btn btn-outline-warning "
+            routerLinkActive="active"
+            routerLink="/wishlist"> <span> WishList <i class="far fa-heart "></i> </span> 
+          </a>
+        </div> -->
+        <div class="pt-2 px-3 nav-item">
+          <a class="btn btn-outline-warning "
+            routerLinkActive="active"
+            routerLink="/cart"><span> Cart <i class="fa fa-cart-plus" aria-hidden="true"></i> </span>
+          </a>
+        </div>
+        <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">Search</button> -->
+        <div class="pt-2 px-3 nav-item">
+          <a class="btn btn-outline-warning " routerLink="/register"><span> Sign Up <i class="fa fa-user-plus" aria-hidden="true"></i></span></a>
+        </div>
+        <div class="pt-2 px-3 nav-item">
+          <a *ngIf="!isLoggedIn" class="btn btn-outline-warning " routerLink="/login"><span> Login <i class="fa fa-sign-in-alt" aria-hidden="true"></i> </span></a>
+          <a *ngIf="isLoggedIn" class="btn btn-outline-warning " routerLink="/login" (click)="logout()"><span> Logout <i class="fa fa-sign-in-alt" aria-hidden="true"></i> </span></a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  
+  

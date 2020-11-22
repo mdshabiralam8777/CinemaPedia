@@ -1,0 +1,12 @@
+<section id="home-header">
+  <div style="padding-top: 15%">
+    Welcome
+  </div>
+</section>
+<div class="container p-5 text-center">
+    <a *ngFor="let genre of genres" routerLink="/genres/{{genre.id}}/{{genre.name}}">
+      <button mat-raised-button color="accent" class="genre-card text-dark" aria-label="Genres" [class.mat-elevation-z2]="isActive" [class.mat-elevation-z8]="isActive">
+        {{genre.name}}
+      </button>
+    </a>
+  </div>

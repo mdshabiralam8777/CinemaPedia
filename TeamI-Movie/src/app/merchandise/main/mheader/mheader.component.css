@@ -1,0 +1,26 @@
+a{
+    text-decoration:none;
+    color:#ffba37;
+    /* margin: 10px; */
+    margin-bottom: 0px;
+    font-size: large;
+}
+.align{
+    text-decoration: none;
+    /* margin-top:3%; */
+    font-size: larger;
+}
+.align:hover{
+    color: yellow;
+}
+img{
+    margin-bottom: 0px;
+}
+nav{
+    margin-bottom: 0;
+}
+a:hover{
+    cursor: pointer;
+    /* color:#ffba37; */
+}
+

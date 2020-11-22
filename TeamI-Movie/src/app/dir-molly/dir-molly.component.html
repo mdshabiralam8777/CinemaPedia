@@ -1,0 +1,21 @@
+<!--p>dir-molly works!</p-->
+<div class="covers">
+
+    <div class="container " style="padding-top: 50px;">
+        <div class="col" style="padding-bottom: 50px;">
+            <div class="blink"><span>Click image to view details</span></div>
+            </div>
+        <h1><b style="font-size: 70px; color: #ffba37;">Top Directors</b></h1>
+        <div class="row" >
+            <div class="col-lg-4" *ngFor="let employee of employees ">
+                <img routerLink="/dirdetailsmolly/{{employee.id}}" src="{{employee?.img}}">
+               
+                <h3 style="max-width: 200px;text-align: center; color: darkgoldenrod; font-weight: 600;">{{employee?.name}}</h3>
+            </div>
+            
+           
+        </div>
+        
+    </div>
+</div>
+

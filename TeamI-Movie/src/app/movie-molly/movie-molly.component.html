@@ -1,0 +1,30 @@
+<!--p>movie-molly works!</p-->
+<div class="bg">
+    <div class="container"  style="color: white; padding-top: 200px;">
+      <h1>Highest-grossing Malayalam Films By Year</h1>
+      <nav class="navbar" style="color: white;">
+        <input class="form-control" type="text" name="title1" [(ngModel)]="title1" (ngModelChange)="Search()" placeholder="Enter a Movie Name">
+      </nav>
+    <table class="table table-bordered" style="color: white;">
+     <thead>
+       <tr>
+         <th >SI.NO </th>
+         <th>MOVIE</th>
+         <th>DIRECTOR</th>
+         <th>STUDIO</th>
+         <th>YEAR</th>
+       </tr>
+     </thead>
+     <tbody>
+       <tr  *ngFor="let employee of employees" style="color: white;">
+         <td>{{employee.id}}</td>
+         <td routerLink="/moviemollydetails/{{employee.id}}">{{employee?.title1}}</td>
+         <td>{{employee?.director1}}</td>
+         <td>{{employee?.studio1}}</td>
+         <td>{{employee?.year1}}</td>
+       </tr>
+     </tbody>
+    
+    </table>
+    </div>
+    </div>

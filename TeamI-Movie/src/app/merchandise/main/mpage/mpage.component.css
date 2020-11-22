@@ -1,0 +1,6 @@
+.point{
+    cursor: pointer;
+}
+a:hover{
+    text-decoration: none;
+}

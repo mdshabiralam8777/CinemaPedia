@@ -1,0 +1,26 @@
+<div class="container-fluid bg-dark pb-2">
+  <div class="container text-warning">
+    <h1 class="font-weight-bolder">Fan Favourites:</h1>
+    <p>
+      This week's top TV and Movies -
+      <span class="bg-warning text-dark font-weight-bold rounded">
+        trailers</span
+      >
+    </p>
+  </div>
+  <ng-image-slider
+    #nav
+    [images]="imageObject"
+    [infinite]="true"
+    [autoSlide]="1"
+    [imagePopup]="true"
+    [imageSize]="{ width: '25%', height: '50%' }"
+    slideImage="1"
+  >
+  </ng-image-slider>
+  <div class="container text-warning">
+    <h1 class="font-weight-bolder">More to Watch:</h1>
+    <p>CinemaPedia helps you select the perfect next show or Movies to Watch</p>
+  </div>
+  <!-- style="width: 840px; height: 500px; text-align:center;margin:0; padding:0;"> -->
+</div>

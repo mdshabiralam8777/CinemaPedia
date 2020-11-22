@@ -1,0 +1,17 @@
+<app-mheader></app-mheader> <br> <br> <hr>
+<section class="container text-center arrange">
+    <div class="enb-lookup-wrapper">
+        <p style="font-size: 2em;"><strong>Enter Details to Track your Order</strong></p>
+        <form id="enb-lookup-form" #trackForm >
+            <div class="enblk-text-field">
+                <label for="order[email]" class="mr-5">Email</label> <input type="text" name="order[email]" placeholder="gmail@thalaivar.com" id="order_email">
+            </div>
+            <div class="enblk-text-field">
+                <label for="order[order_name]" class="mr-1">Order Number</label> <input type="text" id=oNum name="order[order_name]" placeholder="1234567" id="order_order_name">
+            </div>
+            <p><button class="enblk-btn-submit btn-warning btn" type="submit" (click)="statusOrder()">Track My Order <i class="fa fa-map"></i></button></p>
+        </form>
+    </div>
+</section>
+<br> <br> <hr>
+<footer-m></footer-m>

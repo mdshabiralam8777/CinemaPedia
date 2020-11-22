@@ -1,0 +1,55 @@
+::ng-deep .swiper-slide {
+    margin-top: 30px;
+  }
+  
+  ::ng-deep .swiper-pagination-bullets {
+    bottom: 0;
+  }
+  
+  ::ng-deep .swiper-pagination {
+    bottom: 0; position: initial;
+  }
+  .movie-card {
+    display: inline-block;
+    vertical-align: top;
+    cursor: pointer;
+    /* width: 100%; */
+    padding: 0;
+  }
+  
+  mat-card-title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .mat-card-image {
+    /* width: calc(100% + 0px); */
+    margin: 0 -30px 16px -30px;
+  }
+  
+  mat-card-content {
+    padding: 10px;
+    text-align: left;
+  }
+  .mat-tab-label {
+    min-width: 25px !important;
+    padding: 5px;
+    background-color: transparent;
+    color:black;
+    font-weight: 700;
+}
+
+/* Styles for the active tab label */
+.mat-tab-label.mat-tab-label-active {
+    min-width: 25px !important;
+    padding: 5px;
+    background-color:#f0ad4e;
+    color:black;
+    font-weight: 900;
+}
+
+/* Styles for the ink bar */
+.mat-ink-bar {
+    background-color:#f0ad4e;
+}

@@ -1,0 +1,105 @@
+<!-- <p>bulkorder works!</p> -->
+<app-mheader></app-mheader> <br> <br> <hr>
+<div class="container">
+    <div class="globo-formbuilder" data-id="14572">
+        <div class="globo-form boxed-form">
+            <div class="globo-form-app boxed-layout">
+                <form class="g-container" (ngSubmit)="onSubmit(form.value)" #form >
+                    <!-- novalidate="" action="#" method="POST" enctype="multipart/form-data" data-id="14572" -->
+                        <div class="header">
+                            <h3 class="title globo-heading">Bulk &amp; Custom Orders</h3>
+                            
+                            <div class="description globo-description"><p>If you belong to a School, College, Corporate Organization or just a gang of friends, Fit 'N' FilmHolics is your one-stop shop for high-quality products! We fulfill Bulk &amp; Custom Orders for every budget &amp; requirement.</p><p><br></p><p>Just fill out this simple form and our team will get back to you within 48 hours. Cheers!</p></div>
+                            
+                        </div>
+                        <div class="content flex-wrap block-container" data-id="14572">
+                            <div class="globo-form-control layout-2-column">
+                                <label for="name" class="flat-label globo-label"><span class="label-content">Name</span><span class="text-danger text-smaller"> *</span></label>
+                                <input type="text" data-type="name" class="flat-input" id="name" name="name" placeholder="Name" presence="">
+                                
+                                <small class="messages"></small>
+                            </div>
+                            <div class="globo-form-control layout-2-column">
+                                <label for="phone" class="flat-label globo-label"><span class="label-content">Phone</span><span class="text-danger text-smaller"> *</span></label>
+                                <input type="text" data-type="phone" class="flat-input" id="phone" name="phone" placeholder="" presence="">
+                                
+                                <small class="messages"></small>
+                            </div>
+                            <div class="globo-form-control layout-2-column">
+                                <label for="email" class="flat-label globo-label"><span class="label-content">Email</span><span class="text-danger text-smaller"> *</span></label>
+                                <input type="text" data-type="email" class="flat-input" id="email" name="email" placeholder="Email" presence="">
+                                
+                                <small class="messages"></small>
+                            </div>
+                            <div class="globo-form-control layout-2-column">
+                                <label for="file" class="flat-label globo-label"><span class="label-content">File</span></label>
+                                <input type="file" data-type="file" class="flat-input" id="file" name="file" placeholder="or drop files to upload" data-allowed-extensions="jpg,jpeg,png,pdf,svg,ai,eps">
+                                
+                                <small class="messages"></small>
+                            </div>
+                            <div class="globo-form-control layout-2-column">
+                                <label for="select" class="flat-label globo-label"><span class="label-content">Design Type</span><span class="text-danger text-smaller"> *</span></label>
+                                
+                                <select name="select" id="select" class="flat-input" presence="">
+                                    <option selected="selected" value="" disabled="disabled"></option>
+                                    
+                                    <option value="Fit 'N' FilmHolics Design">Fit 'N' FilmHolics Design</option>
+                                    
+                                    <option value="Custom Design">Custom Design</option>
+                                    
+                                </select>
+                                
+                                <small class="messages"></small>
+                            </div>
+                            <div class="globo-form-control layout-2-column">
+                                <label for="number" class="flat-label globo-label"><span class="label-content">Quantity</span><span class="text-danger text-smaller"> *</span></label>
+                                <input type="number" class="flat-input" id="number" name="number" placeholder="Quantity" presence="">
+                                
+                                <small class="messages"></small>
+                            </div>
+                            <div class="globo-form-control layout-1-column">
+                                <label for="textarea" class="flat-label globo-label"><span class="label-content">Comments</span></label>
+                                <textarea id="textarea" data-type="textarea" class="flat-input" rows="3" name="textarea" placeholder="Comments"></textarea>
+                                
+                                <small class="messages"></small>
+                            </div>
+                        </div>
+                        
+                        <!-- <p style="text-align: right;font-size:small;">Made by <a target="_blank" rel="nofollow" href="https://apps.shopify.com/form-builder-contact-form">Powerful Contact Form Builder</a> </p> -->
+    <!--                     
+                        <div class="message error">
+                            <div class="content">Failed ddd</div>
+                            <div class="dismiss" onclick="Globo.dismiss(this)">
+                                <svg viewBox="0 0 20 20" class="" focusable="false" aria-hidden="true"><path d="M11.414 10l4.293-4.293a.999.999 0 1 0-1.414-1.414L10 8.586 5.707 4.293a.999.999 0 1 0-1.414 1.414L8.586 10l-4.293 4.293a.999.999 0 1 0 1.414 1.414L10 11.414l4.293 4.293a.997.997 0 0 0 1.414 0 .999.999 0 0 0 0-1.414L11.414 10z" fill-rule="evenodd"></path></svg>
+                            </div>
+                        </div> -->
+                        
+                        <!-- <div class="message success">
+                            <div class="content"><h4>Thank you for getting in touch!&nbsp;</h4><p><br></p><p>We appreciate you contacting us. One of<strong> </strong><span style="background-color: rgb(255, 255, 255); color: rgb(108, 117, 125);">our team will get back to you within 48 hours.</span></p><p><br></p><p>Have a great day!</p></div>
+                            <div class="dismiss" onclick="Globo.dismiss(this)">
+                                <svg viewBox="0 0 20 20" class="" focusable="false" aria-hidden="true"><path d="M11.414 10l4.293-4.293a.999.999 0 1 0-1.414-1.414L10 8.586 5.707 4.293a.999.999 0 1 0-1.414 1.414L8.586 10l-4.293 4.293a.999.999 0 1 0 1.414 1.414L10 11.414l4.293 4.293a.997.997 0 0 0 1.414 0 .999.999 0 0 0 0-1.414L11.414 10z" fill-rule="evenodd"></path></svg>
+                            </div>
+                        </div> -->
+                        
+                        <div class="footer">
+                            <button (click)="success()" class="btn btn-warning"><span class="spinner"></span>Submit</button>
+                        </div>
+                    <!-- <input type="hidden" value="Bulk Order | Fully Filmy" name="page[title]">
+                    <input type="hidden" value="https://fullyfilmy.in/pages/bulk-order" name="page[href]"> 
+
+                    <input type="hidden" value="{&quot;name&quot;:&quot;Name&quot;,&quot;phone&quot;:&quot;Phone&quot;,&quot;email&quot;:&quot;Email&quot;,&quot;file&quot;:&quot;File&quot;,&quot;select&quot;:&quot;Design Type&quot;,&quot;number&quot;:&quot;Quantity&quot;,&quot;textarea&quot;:&quot;Comments&quot;}" name="_keyLabel"> -->
+                </form>
+                
+                <!-- <div class="message success">
+                    <div class="content"><h4>Thank you for getting in touch!&nbsp;</h4><p><br></p><p>We appreciate you contacting us. One of<strong> </strong><span style="background-color: rgb(255, 255, 255); color: rgb(108, 117, 125);">our team will get back to you within 48 hours.</span></p><p><br></p><p>Have a great day!</p></div>
+                    <div class="dismiss" onclick="Globo.dismiss(this)">
+                        <svg viewBox="0 0 20 20" class="" focusable="false" aria-hidden="true"><path d="M11.414 10l4.293-4.293a.999.999 0 1 0-1.414-1.414L10 8.586 5.707 4.293a.999.999 0 1 0-1.414 1.414L8.586 10l-4.293 4.293a.999.999 0 1 0 1.414 1.414L10 11.414l4.293 4.293a.997.997 0 0 0 1.414 0 .999.999 0 0 0 0-1.414L11.414 10z" fill-rule="evenodd"></path></svg>
+                    </div>
+                </div> -->
+                
+            </div>
+        </div>
+    </div>
+</div>
+<br> <br> <hr>
+<footer-m></footer-m>

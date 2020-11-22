@@ -1,0 +1,30 @@
+<!--p>movies-bolly works!</p-->
+<div class="bg">
+    <div class="container"  style="color: white; padding-top: 200px;">
+      <h1>Highest-grossing Hindi Films By Year</h1>
+      <nav class="navbar" style="color: white;">
+        <input class="form-control" type="text" name="title" [(ngModel)]="title" (ngModelChange)="Search()" placeholder="Enter a Movie Name">
+      </nav>
+    <table class="table table-bordered" style="color: white;">
+     <thead>
+       <tr>
+         <th >SI.NO </th>
+         <th>MOVIE</th>
+         <th>DIRECTOR</th>
+         <th>STUDIO</th>
+         <th>YEAR</th>
+       </tr>
+     </thead>
+     <tbody>
+       <tr  *ngFor="let employee of employees" style="color: white;">
+         <td>{{employee?.id}}</td>
+         <td routerLink="/moviebollydetails/{{employee.id}}">{{employee?.title}}</td>
+         <td>{{employee?.director}}</td>
+         <td>{{employee?.studio}}</td>
+         <td>{{employee?.year}}</td>
+       </tr>
+     </tbody>
+    
+    </table>
+    </div>
+    </div>

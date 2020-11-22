@@ -1,0 +1,92 @@
+<div class="padding-top-60 container" style=" display: flex;">
+  <div style="width: 25%">
+    <mat-card class="actor-card">
+      <img src="https://image.tmdb.org/t/p/w300/{{person.profile_path}}" *ngIf="person.profile_path">
+      <!-- <mat-card-content>
+          <h2>Personal Info</h2>
+          <p>
+            <strong>Gender: </strong>
+            <span *ngIf="person.gender == 2">Male</span>
+            <span *ngIf="person.gender == 1">Female</span>
+          </p>
+          <p><strong>Birthday: </strong>
+            {{person.birthday}}</p>
+          <p><strong>Place of Birth: </strong>{{person.place_of_birth}}</p>
+        </mat-card-content> -->
+    </mat-card>
+  </div>
+
+  <div style="width: 70%">
+    <mat-card class="actor-card-bio" style="width: 100%; margin-bottom: 0;">
+      <mat-card-content>
+        <h3 class="text-warning">Personal Info</h3>
+        <div class="actor-title" dir="auto">
+          <h2 class="text-danger">{{person.name}}</h2><br>
+          <!-- <span class="text-dark h5 pr-3">Connect:</span> -->
+          <span class="actor-social-links pr-2 pb-3"><a href="https://www.facebook.com/{{externalIds['facebook_id']}}"><i
+                class="fab fa-facebook p-1 text-primary"></i></a></span>
+          <span class="actor-social-links pr-2"><a href="https://twitter.com/{{externalIds['twitter_id']}}"><i
+                class="fab fa-twitter p-1 text-info"></i></a></span>
+          <span class="actor-social-links"><a href="https://www.instagram.com/{{externalIds['instagram_id']}}"><i
+                class="fab fa-instagram p-1 text-danger"></i></a></span>
+        </div>
+        <mat-card-content>
+          <p>
+            <strong>Gender: </strong>
+            <span *ngIf="person.gender == 2">Male</span>
+            <span *ngIf="person.gender == 1">Female</span>
+          </p>
+          <p><strong>Birthday: </strong>
+            {{person.birthday}}</p>
+          <p><strong>Place of Birth: </strong>{{person.place_of_birth}}</p>
+        </mat-card-content>
+        <div class="pt-2">
+          <h3 class="text-warning  bg-dark rounded d-inline-flex px-1">Biography</h3>
+          <div class="biography">
+            <p style="text-align: justify;">{{person.biography}}</p>
+            <div *ngIf="person.biography?.length == 0" style="text-align: justify;">From Wikipedia, the free encyclopedia Margaret Denise Quigley (born May 22, 1979), professionally known as Maggie Q, is an American actress, animal rights activist and former fashion model. She achieved international fame starring as the title role on The CW's action-thriller series Nikita that aired in 2010-2013. In 2014, she will portray the role of Tori Wu in the film adaption of Veronica Roth's bestselling novel Divergent. Quigley was born and raised in Honolulu, Hawaii. Her father is of Irish and Polish descent and her mother is a Vietnamese immigrant.Her parents met while her father was stationed in Vietnam during the war.</div>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+
+    <!-- <mat-card class="actor-card-bio" style="width: 100%; margin-bottom: 0;">
+        <mat-card-content>
+          <mat-tab-group>
+            <mat-tab [label]="'Movies'">
+              Soon
+            </mat-tab>
+            <mat-tab [label]="'Images'">
+              Soon
+              <mat-card>
+                <img mat-card-image src="http://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+              </mat-card>
+            </mat-tab>
+            <mat-tab [label]="'Extra Info'">
+              Soon
+            </mat-tab>
+          </mat-tab-group>
+        </mat-card-content>
+      </mat-card> -->
+  </div>
+</div>
+<div class="container">
+  <mat-card class="actor-card-bio" style="width: 100%; margin-bottom: 0;">
+    <mat-card-content>
+      <mat-tab-group>
+        <mat-tab [label]="'Movies'">
+          Coming Soon....
+        </mat-tab>
+        <mat-tab [label]="'Images'">
+          Coming Soon....
+          <mat-card>
+            <!-- <img mat-card-image src="http://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu"> -->
+          </mat-card>
+        </mat-tab>
+        <mat-tab [label]="'Extra Info'">
+          Coming Soon....
+        </mat-tab>
+      </mat-tab-group>
+    </mat-card-content>
+  </mat-card>
+</div>

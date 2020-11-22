@@ -1,0 +1,40 @@
+.total{
+    background-color: rgb(0, 0, 7);
+}
+p{
+    color: white;
+}
+
+.im1{
+    width: 100px;
+    height: 100px;
+    margin-left: 50px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    box-sizing: border-box;
+}
+.im2{
+    width: 300px;
+    height: 300px;
+    margin-left: 50px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    color: white;
+}
+.line{
+    display: inline;
+    font-family: 'Sofia';font-size: 50px;
+    color: rgb(148, 33, 5);
+}
+.form-inline{
+    display: inline;
+    margin-left: 600px;
+    box-sizing: border-box;
+}
+.headline{
+    background-color: rgb(255, 238, 5);
+    height: 20%;
+
+}

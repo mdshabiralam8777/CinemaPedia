@@ -1,0 +1,8 @@
+<div *ngIf="movies" class="container p-5">
+    <h1 class="bg-warning p-1 rounded text-center">{{title}}</h1>
+    <div class="row">
+      <div class="col-3 pb-1" *ngFor="let movie of movies;">
+        <app-poster-card class="genre-movie" [model]="movie"></app-poster-card>
+      </div>
+    </div>
+</div>

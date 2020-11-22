@@ -1,0 +1,22 @@
+<!--p>hero-tollydetails works!</p-->
+<div class="container" style="padding-bottom: 50px;padding-top: 50px;">
+    <div class="row" >
+        <div class="col-4">
+        <img src="{{employee?.img}}">
+        </div>
+        <div class="col-2">
+         <h4> Name: </h4>
+         <h4> Known: </h4>
+         <h4> Date Of Birth:</h4>
+         <h4>  Place Of Birth:</h4>
+        </div>
+        <div class="col-2">
+            <h4>  {{employee?.name}}</h4>
+            <h4>  {{employee?.known}} </h4>
+            <h4> {{employee?.dob}} </h4>
+            <h4> {{employee?.birth}}</h4>
+    </div> <br>
+    <div class="row" style="padding-top: 50px; max-width: 1000px;">
+       <h1><b> Biography </b></h1> <p>{{employee?.bio}}</p>
+    </div>
+</div>

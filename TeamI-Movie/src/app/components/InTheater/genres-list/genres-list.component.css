@@ -1,0 +1,44 @@
+.genre-card{
+    display: inline-block;
+    margin: 10px 5px;
+    padding: 10px 0;
+    vertical-align: top;
+    font-size: 1rem;
+    transition: 0.3s;
+  }
+  .genre-card:hover{
+    transform: scale(0.9, 0.9);
+    box-shadow: 5px 5px 30px 15px rgba(77, 73, 28, 0.973), 
+    -5px -5px 30px 15px rgba(0,0,0,0.22);
+  }
+  #home-header{
+    height: 550px;
+    background: linear-gradient(rgba(52,41,49,0.8), rgba(26, 33, 74, 0.8)), url('src\assets\images\bck_cinema_2.jpg');
+    background-size: cover;
+    bottom: 50px;
+  }
+  
+  /* Large desktops and laptops */
+  @media (min-width: 1200px) {
+    .genre-card{  width: 20%;  }
+  }
+  
+  /* Landscape tablets and medium desktops */
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .genre-card{  width: 25%;  }
+  }
+  
+  /* Portrait tablets and small desktops */
+  @media (min-width: 768px) and (max-width: 991px) {
+    .genre-card{  width: 40%;  }
+  }
+  
+  /* Landscape phones and portrait tablets */
+  @media (max-width: 767px) {
+    .genre-card{  width: 50%;  }
+  }
+  
+  /* Portrait phones and smaller */
+  @media (max-width: 480px) {
+    .genre-card{  width: 80%;  }
+  }

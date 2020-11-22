@@ -1,0 +1,45 @@
+/*container
+.carousel{
+    margin-top: 0;
+    padding: 0 40px 30px 40px;
+}
+.carousel-control{
+    left: -12px;
+    height: 40px;
+    width: 40px;
+    background: none repeat scroll 0 0 #222222;
+    border:4px solid #FFFFFF;
+    border-radius: 23px 23px 23px 23px;
+    margin-top: 90px;
+
+}
+.carousel-right{
+    right: -12px;
+}
+.carousel-indicators {
+    right: 50%;
+    top: auto;
+    bottom: -10px;
+    margin-right: -19px;
+}
+.carousel-indicators li {
+    background: #cecece;
+}
+
+.carousel-indicators .active {
+    background: #428bca;
+}*/
+img{
+    border-radius: 50%;
+    width: 200px;
+    height:200px;
+  }
+  
+  .covers{
+      background-image: url('https://www.pngitem.com/pimgs/m/35-356455_transparent-lights-camera-action-hd-png-download.png');
+      background-position: 0% 1%;
+      background-size: 15%;
+      background-repeat: no-repeat;
+  
+  }
+  

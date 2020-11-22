@@ -1,0 +1,84 @@
+<div *ngIf="movie">
+
+    <div class="parrallax-content" [ngStyle]="{'background-image': 'linear-gradient(rgba(52,41,49,0.80), rgba(0,0,0,0.85)), url('+'https://image.tmdb.org/t/p/w1280'+movie.backdrop_path+')'}">
+  
+      <div class="parallax-left-content">
+        <section class="parallax-position">
+  
+          <div class="parallax-img-container">
+            <img src="https://image.tmdb.org/t/p/w500/{{movie?.poster_path}}" alt="">
+          </div>
+
+          <div class="parallax-right-content text-white"> <!--Title-->
+            <h2 class="text-danger">{{movie.title}}</h2>
+            <h4 class="text-warning">{{movie.vote_average}} <span><i class="far fa-star"></i></span></h4>
+            <p class="font-weight-bold h5">Overview</p>
+            <p style="padding-right: 8px">{{movie.overview}}</p>
+            <div>
+              <button mat-raised-button color="accent" aria-label="Trailer" (click)="openDialog()"><mat-icon class="icon-colored" style="background: white; border-radius: 50%;">play_arrow</mat-icon> Watch Trailer</button>
+            </div>
+            <div>
+              <p class="text-danger font-weight-bold pt-2 pb-0 mb-0">Categories</p>
+              <a *ngFor="let genre of movie.genres" routerLink="/genres/{{genre.id}}/{{genre.name}}">
+                <button mat-raised-button color="accent" aria-label="Genres">{{genre.name}}</button>
+              </a>
+            </div>
+            <!-- <section class="top-billed-cast mt-5 ml-0 pl-0">
+              <p class="text-dark bg-warning rounded">Top Billed Cast</p>
+              <div style="display: flex">
+                <div *ngFor="let actor of cast; let last = last" [ngStyle]="{'border-right': last !== true ? '1px solid #ffffff75' : ''}" style="width: 20%;">
+      
+                  <a routerLink="/actor/{{actor?.id}}">
+                    <div style="display: inline-flex; align-items: center; padding: 0 5px;">
+                      <img mat-card-image src="https://image.tmdb.org/t/p/w500/{{actor?.profile_path}}">
+                      <div>
+                        <small style="color: #F44336; font-weight: 500">{{actor.character}}</small>
+                        <p style="margin: 0; font-size: 14px;">{{actor.name}}</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </section> -->
+          </div>
+        </section>
+        <section class="top-billed-cast pt-3 ml-0 pl-0">
+          <p class="text-dark bg-warning rounded">Top Billed Cast</p>
+          <div style="display: flex">
+            <div *ngFor="let actor of cast; let last = last" [ngStyle]="{'border-right': last !== true ? '1px solid #ffffff75' : ''}" style="width: 20%;">
+  
+              <a routerLink="/actor/{{actor?.id}}">
+                <div style="display: inline-flex; align-items: center; padding: 0 5px;">
+                  <img mat-card-image src="https://image.tmdb.org/t/p/w500/{{actor?.profile_path}}">
+                  <div>
+                    <small style="color: #F44336; font-weight: 500">{{actor.character}}</small>
+                    <p style="margin: 0; font-size: 14px;">{{actor.name}}</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </section>
+      </div>
+  
+    </div>
+  
+    <div class="container">
+      <div *ngIf="similarMovies" class="similar-movies pt-4">
+        <h1 class="bg-warning p-1 rounded text-center">Recommended Movies</h1>
+        <div style="text-align:center;">
+          <span *ngFor="let movie of similarMovies;">
+            <app-poster-card [model]="movie" class="recommended-poster" (click)="upOnRouting()"></app-poster-card>
+          </span>
+        </div>
+      </div> <!--End Similar Movies-->
+  
+    </div>
+  
+  
+  </div>
+  <div *ngIf="isLoading" style="margin-top: 30%">
+    <div class="loading">
+      <h4>Loading</h4>
+    </div>
+  </div>

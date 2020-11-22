@@ -1,0 +1,974 @@
+<!-- <div class="container text-warning" style="max-width: 2000px;">
+
+    <div class="row " style="height: 400px;">
+
+        <div class="col " style="padding-top: 150px; padding-left: 100px;">
+            <h1><strong>Cinema has no boundary,Its like a ribbon of dream</strong></h1> <br>
+            <div>
+                <h3>Cinematography is a writing with image in mouvement and with sounds. Cinema should make you forget
+                    that you are sitting in a Theatre</h3>
+            </div>
+            <span style="font-size:30px;cursor:pointer" onclick="openNav()"> <button type="button"
+                    class="btn btn-warning btn-lg border rounded">Sign up now &nbsp;<i
+                        class='fas fa-arrow-circle-right'></i></button></span>
+        </div>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+            <div class="col">
+                <h1 style="font-size: 60px; color:white"><strong>It's not about Treasure. </strong></h1> <br>
+                <h1 style="font-size: 60px; color:white"><strong>It's about Treasure</strong></h1> <br>
+
+
+                <div class="container" style="width:75%; margin-left: 0px;">
+
+                    <div class="jumbotron">
+                        <div class="container">
+                            <form [formGroup]="eform">
+                                <div class="form-group">
+                                    <label for="name"> Name</label>
+                                    <input formControlName="name" id="name" type="text" class="form-control">
+                                    <div *ngIf="eform.get('name').invalid && eform.get('name').touched "
+                                        class="text-danger">
+                                        <small *ngIf="name.errors.required"> Please enter Name </small>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input formControlName="email" id="email" type="text" class="form-control">
+                                    <div *ngIf="eform.get('email').invalid && eform.get('email').touched "
+                                        class="text-danger">
+                                        <small *ngIf="email.errors.required"> Invalid Email </small>
+                                    </div>
+                                </div> <br>
+                            </form>
+                            <button (click)="clicksub()" [disabled]="eform.invalid" type="button"
+                                class="border btn btn-warning text-warning font-weight-bold"> Submit</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div> -->
+<footer>
+    <div class="container-fluid text-light">
+        <div class="row">
+            <div class="col  text-center">
+                <a routerLinkActive="active" routerLink="/home"><img  class="mt-5 pt-5" src="\assets\images\logoYellow.jpg" alt="Logo"></a>
+            </div>
+            <div class="col">
+                <h3 class="text-warning">Site Map</h3>
+                <ul class="list-unstyled three-column">
+                    <li>Home</li>
+                    <a  style="cursor: pointer;" data-toggle="modal" data-target="#exampleModal4">
+                      <li class="hv">About</li>
+                    </a>
+                    <a  style="cursor: pointer;" data-toggle="modal" data-target="#exampleModal5">
+                    <li class="hv">Careers</li>
+                    </a>
+                    <a style="cursor: pointer;"  data-toggle="modal" data-target="#exampleModal6">
+                      <li class="hv">Contact</li>
+                    </a>
+                </ul><br> <hr>
+                <ul class="list-unstyled socila-list">
+                    <li><a href=""><i class="fab fa-facebook-f mr-3"></i></a></li>
+                    <li><a href=""><i class="fab fa-google-plus-g mr-3"></i></a></li>
+                    <li><a href=""><i class="fab fa-linkedin-in mr-3"></i></a></li>
+                    <li><a href=""><i class="fab fa-instagram-square mr-3"></i></a></li>
+                    <li><a href=""><i class="fab fa-dribbble mr-3"></i></a></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div> <br>
+            <div class="box col">
+                <div class="header"><i class="fa fa-paper-plane" aria-hidden="true"></i>
+                    <p class="hidden">Thanks!</p>
+                </div>
+                <div class="form">
+                <input type="text p-3" placeholder="Your Email..." class="field">
+                <input type="button" value="Subscribe" class="button btn btn-warning btn-sm ml-1">
+                </div>
+            </div>
+
+            <div class="col">
+                <h3 class="text-warning">latest Added</h3>
+                <div class="media">
+                    <a href="#" class="pull-left nav-link" routerLinkActive="active" routerLink="/movie/671039">&nbsp;Drama</a>
+                </div>
+                <div class="media">
+                  <a href="#" class="pull-left nav-link" routerLinkActive="active" routerLink="/tv-show/658412">&nbsp;Comedy</a>
+                </div>
+                <div class="media">
+                  <a href="#" class="pull-left nav-link" routerLinkActive="active" routerLink="/movie/529203">&nbsp;Animation</a>
+                </div>
+                <div class="media">
+                  <a href="#" class="pull-left nav-link" routerLinkActive="active" routerLink="/tv-show/595228">&nbsp;Action</a>
+                </div>
+                <div class="media">
+                  <a href="#" class="pull-left nav-link" routerLinkActive="active" routerLink="/tv-show/635302">&nbsp;Adventure</a>
+                </div>
+                <div class="media">
+                  <a href="#" class="pull-left nav-link" routerLinkActive="active" routerLink="/moviebolly">&nbsp;Bollywood</a>
+                </div>
+                <!-- moviebolly -->
+                <!-- <div class="media">
+                    <a href="#" class="pull-left">
+                    </a>
+                   
+                </div>
+
+                <div class="media">
+                    <a href="#" class="pull-left">
+                    </a>
+                    
+                </div> -->
+
+            </div>
+            <div class="col-lg-3">
+                <h3 class="text-warning">Devloper Team</h3>
+                <button type="button"  data-toggle="modal" data-target="#exampleModal">
+                    <img class="img-thumbnail pr-2" src="\assets\images\shabir_Pic.jpg" alt="Shabbir Profile" width="150px" height="auto">  
+                  </button>
+                  <button type="button"  data-toggle="modal" data-target="#exampleModal1">
+                    <img class="img-thumbnail" src="\assets\images\Amalkar_Pic.PNG" alt="" width="132px" height="auto"><br>
+                  </button>
+                  <button type="button"  data-toggle="modal" data-target="#exampleModal2">
+                    <img class="img-thumbnail pr-2" src="\assets\images\Reeyam_Pic.jpg" alt="" width="150px" height="auto">
+                  </button>
+                  <button type="button"  data-toggle="modal" data-target="#exampleModal3">
+                    <img class="img-thumbnail pl-1" src="\assets\images\Priya_pic.jpg" alt="" width="120px" height="auto">
+                  </button>
+            </div>
+
+        </div>
+    </div>
+    <div class="copyright text-center">
+        Copyright &copy; 2020 <span>CinemaPedia</span>
+    </div>
+</footer>
+
+<!-- Profile modals -->
+<section class="shabbir">      
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg  modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title font-weight-bold" id="exampleModalLabel">Md Shabbir Alam</h1>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-8">
+                        <h3 style="text-transform:uppercase ; color: #ffba37;">Devloper Team</h3>
+                        <h4 style="color: coral;" >Tring Tring:(+91)-9874561230</h4>
+                        <h4 style="color: brown;">Reach out to me...</h4>
+                        <a href=""><i class="fab fa-facebook-f mr-3"></i></a>
+                        <a href=""><i class="fab fa-google-plus-g mr-3"></i></a>
+                        <a href=""><i class="fab fa-linkedin-in mr-3"></i></a>
+                        <a href=""><i class="fab fa-instagram-square mr-3"></i></a> <br>
+                    </div>
+                    <div class="col-4">
+                        <img class="img-thumbnail pr-2" src="\assets\images\shabir_Pic.jpg" alt="Shabbir Profile"  height="auto">
+                    </div>
+                </div>
+               <span class="font-weight-bolder"> Md Shabir Alam</span>,From Kolkata, West Bengal, India. He is a front-end developer and also handles backend development.Also a developer and co-founder @ CinemaPedia.And Also worked as a freelancer.
+                <br>
+              <div class="row">
+                <div class="col-md-4">
+                    <h2>Expertise</h2>
+                    <a role="button" class="popover-test" title="HTML5" data-content="HTML5" >
+                        <i class="fab fa-html5 mr-4"></i>
+                    </a>
+                    <a role="button" class="popover-test" title="CSS3" data-content="CSS3" >
+                        <i class="fab fa-css3-alt mr-4"></i>
+                    </a>
+                    <a role="button" class="popover-test" title="Javascript" data-content="Javascript" >
+                        <i class="fab fa-js mr-4"></i>
+                    </a>
+                    <a role="button" class="popover-test" title="Angular" data-content="Angular" >
+                        <i class="fab fa-angular mr-4"></i>
+                    </a>
+                    <a role="button" class="popover-test" title="BootStrap" data-content="BootStrap" >
+                        <i class="fab fa-bootstrap mr-4"></i>
+                    </a>
+                    <a role="button" class="popover-test" title="Wordpress" data-content="Wordpress">
+                        <i class="fab fa-wordpress mr-4"></i>
+                    </a>
+                    <!-- <h3 class="text-center">Website/Graphic Designing</h3> -->
+                    <a role="button" class="popover-test" title="Website/Graphic Designing" data-content="Website/Graphic Designing" >
+                      <i class="fas fa-laptop-code mr-4"></i>
+                    </a>
+                    <!-- <h3>Mobile App UI/UX Design</h3> -->
+                    <a role="button" class="popover-test" title="Mobile App UI/UX Design" data-content="Mobile App UI/UX Design" >
+                      <i class="fas fa-mobile mr-3"></i>
+                    </a>
+                    <!-- <h3>Custom Website Development</h3> -->
+                    <a role="button" class="popover-test" title="Custom Website Development" data-content="Custom Website Development" >
+                      <i class="fab fa-free-code-camp mr-3"></i>
+                    </a>
+                    <!-- <h3>eCommerce Solutions</h3> -->
+                    <a role="button" class="popover-test" title="eCommerce Solutions" data-content="eCommerce Solutions" >
+                      <i class="fab fa-opencart mr-3"></i>
+                    </a>
+                    <br>
+                    <h2>Devloper & Co-Founder @</h2>
+                    <a routerLinkActive="active" routerLink="/home"><img  src="\assets\images\logoYellow.jpg" alt="Logo"></a>
+               
+    
+                </div>
+                <div class="col-md-8"> <br>
+                    <label for="">HTML/CSS</label>
+                    <div class="progress">
+                        <div class="progress-bar bg-success" role="progressbar" style="width:90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div> <br>
+                      <label for="">Responsive Web Design</label>
+                      <div class="progress">
+                        <div class="progress-bar bg-info" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div> <br>
+                      <label for="">Angular JS</label>
+                      <div class="progress">
+                        <div class="progress-bar bg-warning" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div> <br>
+                      <label for="">Node JS</label>
+                      <div class="progress">
+                        <div class="progress-bar bg-danger" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div> <br>
+                      <label for="">BootStrap/Wordpress</label>
+                      <div class="progress">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                      <!--  -->
+                    </div>
+                    <br>
+                    <h2 class="work">Work Experience</h2>
+                      <ul class="timeline">
+                          <li>
+                              <div class="timeline-badge">
+                              <a><i class="fa fa-circle" id=""></i></a>
+                              </div>
+                              <div class="timeline-panel">
+                                  <div class="timeline-heading">
+                                      <h2>PAT</h2>
+                                      <h4>Front-End Web Developer -Cognizant</h4>
+                                  </div>
+                                  <div class="timeline-body">
+                                      <ul style="padding:0 40px">
+                                        <li>Devloping, Designing Website for Cinema details, Cinemapedia</li>
+                                          <li>Develop, enhance, maintain and support web applications in Interwoven TeamSite CMS to evaluate the effectiveness, usability, and accessibility of Web sites and make recommendations for enhancements to Web sites overall effectiveness.</li>
+                                      </ul>
+                                  </div>
+                                  <div class="timeline-footer">
+                                      <p class="text-right">August 2020 - PRESENT</p>
+                                  </div>
+                              </div>
+                          </li>
+                          
+                          <li class="timeline-inverted">
+                              <div class="timeline-badge">
+                                  <a><i class="fa fa-circle invert" id=""></i></a>
+                              </div>
+                              <div class="timeline-panel">
+                                  <div class="timeline-heading">
+                                      <h4>Freelance Web Developer - PIONEER Web Architects</h4>
+                                  </div>
+                                  <div class="timeline-body">
+                                      <p>Designed, developed and successfully implemented eShopping web sites for new ecommerce with my team </p>
+                                  </div>
+                                  <div class="timeline-footer">
+                                      <p class="text-right">June 2020 - August 2020</p>
+                                  </div>
+                              </div>
+                          </li>
+                          
+                          <li>
+                              <div class="timeline-badge">
+                                  <a><i class="fa fa-circle" id=""></i></a>
+                              </div>
+                              <div class="timeline-panel">
+                                  <div class="timeline-heading">
+                                      <h4>Web Developer - UI/UX</h4>
+                                  </div>
+                                  <div class="timeline-body">
+                                      <p>Developed Static web pages for bakeries, Designed blogs for friends</p>
+    
+                      <ul style="padding:0 40px">
+                      <li>Wrote and published weekly newsletters action updates.</li>
+                      </ul>
+                                  </div>
+                                  <div class="timeline-footer">
+                                      <p class="text-right">March 2020 - June 2020</p>
+                                  </div>
+                              </div>
+                          </li>
+                          <li class="clearfix no-float"></li>
+                      </ul>
+              </div>
+    
+    
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+</section>
+<section class="amalkar">
+      
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg  modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title font-weight-bold" id="exampleModalLabel1">Amalkar Aravind A</h1>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-8">
+    
+                        <h3 style="text-transform:uppercase ; color: #ffba37;">Devloper Team</h3>
+                        <h4 style="color: coral;" >Tring Tring:(+91)-8438142688</h4>
+                        <h4 style="color: brown;">Reach out to me...</h4>
+                        <a href="https://www.facebook.com/Amalkararavind/"><i class="fab fa-facebook-f mr-3"></i></a>
+                        <a href=""><i class="fab fa-google-plus-g mr-3"></i></a>
+                        <a href="https://www.linkedin.com/in/a-amalkar-aravind-405798188"><i class="fab fa-linkedin-in mr-3"></i></a>
+                        <a href=""><i class="fab fa-instagram-square mr-3"></i></a> <br>
+                    </div>
+                    <div class="col-4">
+                        <img class="img-thumbnail" src="\assets\images\Amalkar_Pic.PNG" alt="" width="132px" height="auto"><br>
+                    </div>
+                </div>
+                Amalkar Aravind belongs to Trichy,TN,India,Co-founder @ CinemaPedia and is another front-end developer.He handles both the designing layout (Content management system developer) and UI/UX . Also quite good at backend like json-server, nodejs etc.
+                <br>
+              <div class="row">
+                <div class="col-md-4">
+                    <h2>Expertise</h2>
+                    <a role="button" class="popover-test" title="HTML5" data-content="HTML5" >
+                        <i class="fab fa-html5 mr-4"></i>
+                    </a>
+                    <a role="button" class="popover-test" title="CSS3" data-content="CSS3" >
+                        <i class="fab fa-css3-alt mr-4"></i>
+                    </a>
+                    <a role="button" class="popover-test" title="Javascript" data-content="Javascript" >
+                        <i class="fab fa-js mr-4"></i>
+                    </a>
+                    <a role="button" class="popover-test" title="Angular" data-content="Angular" >
+                        <i class="fab fa-angular mr-4"></i>
+                    </a>
+                    <a role="button" class="popover-test" title="BootStrap" data-content="BootStrap" >
+                        <i class="fab fa-bootstrap mr-4"></i>
+                    </a>
+                    <a role="button" class="popover-test" title="Wordpress" data-content="Wordpress">
+                        <i class="fab fa-wordpress mr-4"></i>
+                    </a>
+                    <!-- <h3 class="text-center">Website/Graphic Designing</h3> -->
+                    <a role="button" class="popover-test" title="Website/Graphic Designing" data-content="Website/Graphic Designing" >
+                      <i class="fas fa-laptop-code mr-4"></i>
+                    </a>
+                    <!-- <h3>Mobile App UI/UX Design</h3> -->
+                    <a role="button" class="popover-test" title="Mobile App UI/UX Design" data-content="Mobile App UI/UX Design" >
+                      <i class="fas fa-mobile mr-3"></i>
+                    </a>
+                    <!-- <h3>Custom Website Development</h3> -->
+                    <a role="button" class="popover-test" title="Custom Website Development" data-content="Custom Website Development" >
+                      <i class="fab fa-free-code-camp mr-3"></i>
+                    </a>
+                    <!-- <h3>eCommerce Solutions</h3> -->
+                    <a role="button" class="popover-test" title="eCommerce Solutions" data-content="eCommerce Solutions" >
+                      <i class="fab fa-opencart mr-3"></i>
+                    </a>
+                    <br>
+                    <h2>Devloper & Co-Founder @</h2>
+                    <a routerLinkActive="active" routerLink="/home"><img  src="\assets\images\logoYellow.jpg" alt="Logo"></a>
+               
+    
+                </div>
+                <div class="col-md-8"> <br>
+                    <label for="">HTML/CSS</label>
+                    <div class="progress">
+                        <div class="progress-bar bg-success" role="progressbar" style="width:90%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div> <br>
+                      <label for="">Responsive Web Design</label>
+                      <div class="progress">
+                        <div class="progress-bar bg-info" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div> <br>
+                      <label for="">Angular JS</label>
+                      <div class="progress">
+                        <div class="progress-bar bg-warning" role="progressbar" style="width: 75%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div> <br>
+                      <label for="">Node JS</label>
+                      <div class="progress">
+                        <div class="progress-bar bg-danger" role="progressbar" style="width: 60%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div> <br>
+                      <label for="">BootStrap/Wordpress</label>
+                      <div class="progress">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                      <!--  -->
+                    </div>
+                    <br>
+                    <h2 class="work">Work Experience</h2>
+                      <ul class="timeline">
+                          <li>
+                              <div class="timeline-badge">
+                              <a><i class="fa fa-circle" id=""></i></a>
+                              </div>
+                              <div class="timeline-panel">
+                                  <div class="timeline-heading">
+                                      <h2>PAT</h2>
+                                      <h4>Front-End Web Developer -Cognizant</h4>
+                                  </div>
+                                  <div class="timeline-body">
+                                      <ul style="padding:0 40px">
+                                        <li>Devloping, Designing Website for Cinema details, Cinemapedia</li>
+                                          <li>Develop, enhance, maintain and support web applications in Interwoven TeamSite CMS to evaluate the effectiveness, usability, and accessibility of Web sites and make recommendations for enhancements to Web sites overall effectiveness.</li>
+                                      </ul>
+                                  </div>
+                                  <div class="timeline-footer">
+                                      <p class="text-right">August 2020 - PRESENT</p>
+                                  </div>
+                              </div>
+                          </li>
+                          
+                          <li class="timeline-inverted">
+                              <div class="timeline-badge">
+                                  <a><i class="fa fa-circle invert" id=""></i></a>
+                              </div>
+                              <div class="timeline-panel">
+                                  <div class="timeline-heading">
+                                      <h4>Freelance Web Developer - PIONEER Web Architects</h4>
+                                  </div>
+                                  <div class="timeline-body">
+                                      <p>Designed, developed and successfully implemented eShopping web sites </p>
+                                  </div>
+                                  <div class="timeline-footer">
+                                      <p class="text-right">June 2020 - August 2020</p>
+                                  </div>
+                              </div>
+                          </li>
+                          
+                          <li>
+                              <div class="timeline-badge">
+                                  <a><i class="fa fa-circle" id=""></i></a>
+                              </div>
+                              <div class="timeline-panel">
+                                  <div class="timeline-heading">
+                                      <h4>Web Developer - UI/UX</h4>
+                                  </div>
+                                  <div class="timeline-body">
+                                      <p>Developed Static web pages for bakeries, Designed blogs for friends using wordpress etc</p>
+    
+                      <ul style="padding:0 40px">
+                      <li>Wrote and published weekly newsletters action updates.</li>
+                      </ul>
+                                  </div>
+                                  <div class="timeline-footer">
+                                      <p class="text-right">March 2020 - June 2020</p>
+                                  </div>
+                              </div>
+                          </li>
+                          <li class="clearfix no-float"></li>
+                      </ul>
+              </div>
+    
+    
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+</section>
+<section class="reeyam">
+
+   
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg  modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title font-weight-bold" id="exampleModalLabel2">Reeyam Biswas</h1>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-8">
+    
+                        <h3 style="text-transform:uppercase ; color: #ffba37;">Devloper Team</h3>
+                        <h4 style="color: coral;" >Tring Tring:(+91)-7894561230</h4>
+                        <h4 style="color: brown;">Reach out to me...</h4>
+                        <a href=""><i class="fab fa-facebook-f mr-3"></i></a>
+                        <a href=""><i class="fab fa-google-plus-g mr-3"></i></a>
+                        <a href=""><i class="fab fa-linkedin-in mr-3"></i></a>
+                        <a href=""><i class="fab fa-instagram-square mr-3"></i></a> <br>
+                    </div>
+                    <div class="col-4">
+                        <img class="img-thumbnail pr-2" src="\assets\images\Reeyam_Pic.jpg" alt="" width="150px" height="auto">
+                    </div>
+                </div>
+                Reeyam Biswas,From Kolkata, West Bengal, India. He is a front-end developer & a developer and co-founder @ CinemaPedia.
+                <br>
+              <div class="row">
+                <div class="col-md-4">
+                    <h2>Expertise</h2>
+                    <a role="button" class="popover-test" title="HTML5" data-content="HTML5" >
+                        <i class="fab fa-html5 mr-4"></i>
+                    </a>
+                    <a role="button" class="popover-test" title="CSS3" data-content="CSS3" >
+                        <i class="fab fa-css3-alt mr-4"></i>
+                    </a>
+                    <a role="button" class="popover-test" title="Javascript" data-content="Javascript" >
+                        <i class="fab fa-js mr-4"></i>
+                    </a>
+                    <a role="button" class="popover-test" title="Angular" data-content="Angular" >
+                        <i class="fab fa-angular mr-4"></i>
+                    </a>
+                    <a role="button" class="popover-test" title="BootStrap" data-content="BootStrap" >
+                        <i class="fab fa-bootstrap mr-4"></i>
+                    </a>
+                    <a role="button" class="popover-test" title="Wordpress" data-content="Wordpress">
+                        <i class="fab fa-wordpress mr-4"></i>
+                    </a>
+                    <!-- <h3 class="text-center">Website/Graphic Designing</h3> -->
+                    <a role="button" class="popover-test" title="Website/Graphic Designing" data-content="Website/Graphic Designing" >
+                      <i class="fas fa-laptop-code mr-4"></i>
+                    </a>
+                    <!-- <h3>Mobile App UI/UX Design</h3> -->
+                    <a role="button" class="popover-test" title="Mobile App UI/UX Design" data-content="Mobile App UI/UX Design" >
+                      <i class="fas fa-mobile mr-3"></i>
+                    </a>
+                    <!-- <h3>Custom Website Development</h3> -->
+                    <a role="button" class="popover-test" title="Custom Website Development" data-content="Custom Website Development" >
+                      <i class="fab fa-free-code-camp mr-3"></i>
+                    </a>
+                    <!-- <h3>eCommerce Solutions</h3> -->
+                    <a role="button" class="popover-test" title="eCommerce Solutions" data-content="eCommerce Solutions" >
+                      <i class="fab fa-opencart mr-3"></i>
+                    </a>
+                    <br>
+                    <h2>Devloper & Co-Founder @</h2>
+                    <a routerLinkActive="active" routerLink="/home"><img  src="\assets\images\logoYellow.jpg" alt="Logo"></a>
+               
+    
+                </div>
+                <div class="col-md-8"> <br>
+                    <label for="">HTML/CSS</label>
+                    <div class="progress">
+                        <div class="progress-bar bg-success" role="progressbar" style="width:90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div> <br>
+                      <label for="">Responsive Web Design</label>
+                      <div class="progress">
+                        <div class="progress-bar bg-info" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div> <br>
+                      <label for="">Angular JS</label>
+                      <div class="progress">
+                        <div class="progress-bar bg-warning" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div> <br>
+                      <label for="">Node JS</label>
+                      <div class="progress">
+                        <div class="progress-bar bg-danger" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div> <br>
+                      <label for="">BootStrap/Wordpress</label>
+                      <div class="progress">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                      <!--  -->
+                    </div>
+                    <br>
+                    <h2 class="work">Work Experience</h2>
+                      <ul class="timeline">
+                          <li>
+                              <div class="timeline-badge">
+                              <a><i class="fa fa-circle" id=""></i></a>
+                              </div>
+                              <div class="timeline-panel">
+                                  <div class="timeline-heading">
+                                      <h2>PAT</h2>
+                                      <h4>Front-End Web Developer -Cognizant</h4>
+                                  </div>
+                                  <div class="timeline-body">
+                                      <ul style="padding:0 40px">
+                                        <li>Devloping, Designing Website for Cinema details, Cinemapedia</li>
+                                          <li>Develop, enhance, maintain and support web applications in Interwoven TeamSite CMS to evaluate the effectiveness, usability, and accessibility of Web sites and make recommendations for enhancements to Web sites overall effectiveness.</li>
+                                      </ul>
+                                  </div>
+                                  <div class="timeline-footer">
+                                      <p class="text-right">August 2020 - PRESENT</p>
+                                  </div>
+                              </div>
+                          </li>
+                          
+                          <li class="timeline-inverted">
+                              <div class="timeline-badge">
+                                  <a><i class="fa fa-circle invert" id=""></i></a>
+                              </div>
+                              <div class="timeline-panel">
+                                  <div class="timeline-heading">
+                                      <h4>Freelance Web Developer - PIONEER Web Architects</h4>
+                                  </div>
+                                  <div class="timeline-body">
+                                      <p>Designed, developed and successfully implemented eShopping web sites for new ecommerce with my team </p>
+                                  </div>
+                                  <div class="timeline-footer">
+                                      <p class="text-right">June 2020 - August 2020</p>
+                                  </div>
+                              </div>
+                          </li>
+                          
+                          <li>
+                              <div class="timeline-badge">
+                                  <a><i class="fa fa-circle" id=""></i></a>
+                              </div>
+                              <div class="timeline-panel">
+                                  <div class="timeline-heading">
+                                      <h4>Web Developer - UI/UX</h4>
+                                  </div>
+                                  <div class="timeline-body">
+                                      <p>Developed Static web pages for bakeries, Designed blogs for friends</p>
+    
+                      <ul style="padding:0 40px">
+                      <li>Wrote and published weekly newsletters action updates.</li>
+                      </ul>
+                                  </div>
+                                  <div class="timeline-footer">
+                                      <p class="text-right">March 2020 - June 2020</p>
+                                  </div>
+                              </div>
+                          </li>
+                          <li class="clearfix no-float"></li>
+                      </ul>
+              </div>
+    
+    
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+</section>
+<section class="saravana">
+     
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg  modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title font-weight-bold" id="exampleModalLabel">Saravana Priya</h1>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-8">
+    
+                        <h3 style="text-transform:uppercase ; color: #ffba37;">Devloper Team</h3>
+                        <h4 style="color: coral;" >Tring Tring:(+91)-7894561230</h4>
+                        <h4 style="color: brown;">Reach out to me...</h4>
+                        <a href=""><i class="fab fa-facebook-f mr-3"></i></a>
+                        <a href=""><i class="fab fa-google-plus-g mr-3"></i></a>
+                        <a href=""><i class="fab fa-linkedin-in mr-3"></i></a>
+                        <a href=""><i class="fab fa-instagram-square mr-3"></i></a> <br>
+                    </div>
+                    <div class="col-4">
+                        <img class="img-thumbnail pl-1" src="\assets\images\Priya_pic.jpg" alt="" width="120px" height="auto">
+                    </div>
+                </div>
+                Another Developer and Co-founder @ CinemaPedia ,Saravana Priya,From Kumbakonam, TN, India. She is also a front-end developer and also handles backend development such as json-server etc.,
+                 <br>
+              <div class="row">
+                <div class="col-md-4">
+                    <h2>Expertise</h2>
+                    <a role="button" class="popover-test" title="HTML5" data-content="HTML5" >
+                        <i class="fab fa-html5 mr-4"></i>
+                    </a>
+                    <a role="button" class="popover-test" title="CSS3" data-content="CSS3" >
+                        <i class="fab fa-css3-alt mr-4"></i>
+                    </a>
+                    <a role="button" class="popover-test" title="Javascript" data-content="Javascript" >
+                        <i class="fab fa-js mr-4"></i>
+                    </a>
+                    <a role="button" class="popover-test" title="Angular" data-content="Angular" >
+                        <i class="fab fa-angular mr-4"></i>
+                    </a>
+                    <a role="button" class="popover-test" title="BootStrap" data-content="BootStrap" >
+                        <i class="fab fa-bootstrap mr-4"></i>
+                    </a>
+                    <a role="button" class="popover-test" title="Wordpress" data-content="Wordpress">
+                        <i class="fab fa-wordpress mr-4"></i>
+                    </a>
+                    <!-- <h3 class="text-center">Website/Graphic Designing</h3> -->
+                    <a role="button" class="popover-test" title="Website/Graphic Designing" data-content="Website/Graphic Designing" >
+                      <i class="fas fa-laptop-code mr-4"></i>
+                    </a>
+                    <!-- <h3>Mobile App UI/UX Design</h3> -->
+                    <a role="button" class="popover-test" title="Mobile App UI/UX Design" data-content="Mobile App UI/UX Design" >
+                      <i class="fas fa-mobile mr-3"></i>
+                    </a>
+                    <!-- <h3>Custom Website Development</h3> -->
+                    <a role="button" class="popover-test" title="Custom Website Development" data-content="Custom Website Development" >
+                      <i class="fab fa-free-code-camp mr-3"></i>
+                    </a>
+                    <!-- <h3>eCommerce Solutions</h3> -->
+                    <a role="button" class="popover-test" title="eCommerce Solutions" data-content="eCommerce Solutions" >
+                      <i class="fab fa-opencart mr-3"></i>
+                    </a>
+                    <br>
+                    <h2>Devloper & Co-Founder @</h2>
+                    <a routerLinkActive="active" routerLink="/home"><img  src="\assets\images\logoYellow.jpg" alt="Logo"></a>
+               
+    
+                </div>
+                <div class="col-md-8"> <br>
+                    <label for="">HTML/CSS</label>
+                    <div class="progress">
+                        <div class="progress-bar bg-success" role="progressbar" style="width:90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div> <br>
+                      <label for="">Responsive Web Design</label>
+                      <div class="progress">
+                        <div class="progress-bar bg-info" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div> <br>
+                      <label for="">Angular JS</label>
+                      <div class="progress">
+                        <div class="progress-bar bg-warning" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div> <br>
+                      <label for="">Node JS</label>
+                      <div class="progress">
+                        <div class="progress-bar bg-danger" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div> <br>
+                      <label for="">BootStrap/Wordpress</label>
+                      <div class="progress">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                      <!--  -->
+                    </div>
+                    <br>
+                    <h2 class="work">Work Experience</h2>
+                      <ul class="timeline">
+                          <li>
+                              <div class="timeline-badge">
+                              <a><i class="fa fa-circle" id=""></i></a>
+                              </div>
+                              <div class="timeline-panel">
+                                  <div class="timeline-heading">
+                                      <h2>PAT</h2>
+                                      <h4>Front-End Web Developer -Cognizant</h4>
+                                  </div>
+                                  <div class="timeline-body">
+                                      <ul style="padding:0 40px">
+                                        <li>Devloping, Designing Website for Cinema details, Cinemapedia</li>
+                                          <li>Develop, enhance, maintain and support web applications in Interwoven TeamSite CMS to evaluate the effectiveness, usability, and accessibility of Web sites and make recommendations for enhancements to Web sites overall effectiveness.</li>
+                                      </ul>
+                                  </div>
+                                  <div class="timeline-footer">
+                                      <p class="text-right">August 2020 - PRESENT</p>
+                                  </div>
+                              </div>
+                          </li>
+                          
+                          <li class="timeline-inverted">
+                              <div class="timeline-badge">
+                                  <a><i class="fa fa-circle invert" id=""></i></a>
+                              </div>
+                              <div class="timeline-panel">
+                                  <div class="timeline-heading">
+                                      <h4>Freelance Web Developer - PIONEER Web Architects</h4>
+                                  </div>
+                                  <div class="timeline-body">
+                                      <p>Designed, developed and successfully implemented eShopping web sites for new ecommerce with my team </p>
+                                  </div>
+                                  <div class="timeline-footer">
+                                      <p class="text-right">June 2020 - August 2020</p>
+                                  </div>
+                              </div>
+                          </li>
+                          
+                          <li>
+                              <div class="timeline-badge">
+                                  <a><i class="fa fa-circle" id=""></i></a>
+                              </div>
+                              <div class="timeline-panel">
+                                  <div class="timeline-heading">
+                                      <h4>Web Developer - UI/UX</h4>
+                                  </div>
+                                  <div class="timeline-body">
+                                      <p>Developed Static web pages for bakeries, Designed blogs for friends</p>
+    
+                      <ul style="padding:0 40px">
+                      <li>Wrote and published weekly newsletters action updates.</li>
+                      </ul>
+                                  </div>
+                                  <div class="timeline-footer">
+                                      <p class="text-right">March 2020 - June 2020</p>
+                                  </div>
+                              </div>
+                          </li>
+                          <li class="clearfix no-float"></li>
+                      </ul>
+              </div>
+    
+    
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+</section>
+
+<!-- Footer modals -->
+<section class="aboutus">
+     
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg  modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title" id="exampleModalLabel">About Us</h1>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body abouts">
+          <div class="row abt">
+            <h1 style="color: #ffba37;">CinemaPedia</h1>
+
+          <p>CinemaPedia is a Community where you can find details of a film ,cast & crew.It is especially dedicated to moviebuffs.Connecting & educating people through the art of cinema .....!!! <em><strong><p style="color: #ffba37;">“There is no end. There is no beginning. There is only the infinite passion of life. ”-Cinema!!!</p></strong></em> </p>
+
+           
+            <br>
+
+            <h2>Our Mission:</h2>
+              <p>To Deliver details about movies, and also To inspire, inform and entertain through the universal language of cinema arts and to serve as a cultural and educational platform for all.</p><br>
+
+
+            <h2> Our Vision: </h2>
+                <p>To evolve as a Film-industry oriented, research based Website for Details information in various Categories of Film-industry with an ultimate objective of meeting users requirement and demand
+                </p><br>
+                               <span style="color: #ffba37;"> CINEMAPEDIA- Community for cinema:</span> <br>
+                                  Movies and its stuffs <br>
+                                  Indian Film Industry <br>
+                                  Fit 'N' FilmHolics-Stop wishing Start Shopping!!! <br>
+                                <hr>
+                                <span style="color: #ffba37;">Co-Founders & Developers:</span> <br>
+                                    Saravana Priya <br>
+                                    Md Shabir Alam <br>
+                                    Reeyam Biswas <br>
+                                    Amalkar Aravind A <br>
+          </div>
+         
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="careeers">
+     
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg  modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title" id="exampleModalLabel">Join with us!!</h1>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body careers">
+          <div class="row">
+            <div class="text-center">
+              <h1>CAREERS</h1>
+                <em><p><span style="color: yellow;">Join us.</span> <span style="color: tomato;">Join Earth's </span> <span style="color: #ffba37;">mightiest heroes</span>.</p></em>
+                <p class="text-center">Well, because we create things which people love. We love cinema, and everything we create has a filmy touch to it. Our love for cinema has allowed us to be associated with some of the biggest names in the industry, like Mani Ratnam, Rajinikanth, Kamal Haasan, SPB, Di Caprio,Ajith kumar among others. Our products are worn, used, abused and shown off all over the world. Our team of 3 has grown to a team of 7 within a span of three months</p>
+ 
+                <p class="text-center">And, at night, we save the world.</p>
+ 
+                <p class="text-center">If you think you can fit in and believe you’re ready for impromptu brainstorms, contagious craziness and unanticipated superhero landings, well you have found the right place.</p>
+                <em><p> 
+                  Shoot over the most honest mail you've ever written to <span style="color: tomato;"> careers@cinemapedia.in </span></p></em>
+
+        
+                        CURRENT OPENINGS <br>
+                        Graphic Designer<br>
+                        Experience: Senior/Mid-Level <br>
+                        Location: Chennai<br>
+                        Position: Full-time <br>
+
+                        Full Stack/Front End Developer <br>
+                        Experience: Fresher/Mid-Level <br>
+                        Location: Kolkata <br>
+                        Position: Full-time <br>
+
+
+            </div>
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="contactus">
+     
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal6" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg  modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title" id="exampleModalLabel">Contact US</h1>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body contacts">
+          <div class="row">
+            <div class="text-center">
+              <h1></h1>
+                <em><p><span style="color: #ffba37;">“THIS IS THE BEGINNING OF A BEAUTIFUL FRIENDSHIP”</span>.</p></em>
+                <p class="text-center">If you have any doubts, any appropriate/inappropriate questions, want to do business with us, want to tell us how much you love us/hate us, or just want to rant about movies to a fellow cinephile, get in touch and we’ll make sure you receive a response faster than Thanos’ snap.</p>
+ 
+                <p class="text-center">Reach us at contact@cinemapedia.in 
+                  <li><a href=""><i class="fab fa-facebook-f mr-3"></i></a></li>
+                  <li><a href=""><i class="fab fa-google-plus-g mr-3"></i></a></li>
+                  <li><a href=""><i class="fab fa-linkedin-in mr-3"></i></a></li>
+                  <li><a href=""><i class="fab fa-instagram-square mr-3"></i></a></li>
+                  <li><a href=""><i class="fab fa-dribbble mr-3"></i></a></li>
+                  
+                  </p>
+ 
+                <p class="text-center">You can also call us on +91 9797979797 (Monday - Friday) between 10 AM and 5 PM.</p>
+                <em><p> 
+                  Shoot over the most honest mail you've ever written to <span style="color: tomato;"> careers@cinemapedia.in </span></p></em>
+            </div>
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

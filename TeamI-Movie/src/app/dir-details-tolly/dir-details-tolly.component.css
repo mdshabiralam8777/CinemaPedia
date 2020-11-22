@@ -1,0 +1,13 @@
+img{
+    border-radius: 50%;
+    width: 200px;
+    height:200px;
+  }
+  
+  .covers{
+      background-image: url('https://www.pngitem.com/pimgs/m/35-356455_transparent-lights-camera-action-hd-png-download.png');
+      background-position: 0% 1%;
+      background-size: 15%;
+      background-repeat: no-repeat;
+  
+  }

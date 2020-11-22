@@ -1,0 +1,14 @@
+<div class="container-fluid padding-top-60 p-5 text-center">
+    <div class="list-movies">
+      <div class="row">
+        <div class="col-3" *ngFor="let movie of nowPlaying">
+          <app-poster-card  [model]="movie"></app-poster-card>
+        </div>
+      </div>
+  
+      <mat-paginator [length]="totalResults"
+                     [pageSize]="20"
+                     (page)="changePage($event)">
+      </mat-paginator>
+    </div>
+</div>

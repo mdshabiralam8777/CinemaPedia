@@ -1,0 +1,30 @@
+<div class="container-fluid pt-0 mt-0">
+    <div class="container p-2 rounded">
+        <div class="form-group row text-center ml-5">
+            <div class="col-7">
+                <input id="query" type="text" class="form-control rounded-pill border border-warning" [(ngModel)]="query" (keyup.enter)="getSearchResults()" placeholder="Search your favourite movies and series...">
+            </div>
+            <div class="col-1">
+                <button type="button" (click)="getSearchResults()" class="btn btn-outline-warning rounded-pill">Search</button>
+            </div>
+        </div>
+        <div class="container row bg-dark">
+            <div class="col-3 pb-1 bg-light" *ngFor="let movie of movies$">
+                <!-- <img class="card-img-top" src="https://image.tmdb.org/t/p/w780{{mov.poster_path}}"
+                style="width: 250px; height: auto;" alt="Naruto"> -->
+                <app-poster-card [model]="movie" style="width: 100%"></app-poster-card>
+            </div>
+        </div>
+        <div *ngIf="movies$?.length == 0">
+            <h1 class="bg-light p-5 border border-warning mt-2" ><span class="font-weight-bold text-dark">Sorry 😔 </span><br>No Result Found......................</h1>
+        </div>
+    </div>
+</div>
+<!-- <div class="container">
+    <h1>Search Result</h1>
+    <div style="text-align:center;">
+        <span *ngFor="let mov of movies$;">
+            <app-poster-card [model]="movie" class="recommended-poster" (click)="upOnRouting()"></app-poster-card>
+        </span>
+    </div>
+</div> -->

@@ -1,0 +1,34 @@
+img{
+    border-radius: 50%;
+    width: 200px;
+    height:200px;
+}
+
+.covers{
+    background-image:url('https://ak.picdn.net/shutterstock/videos/1024003763/thumb/1.jpg') ;
+    background-repeat: no-repeat;
+    background-position: 50% ;
+    background-size: cover;
+
+}
+.blink{
+    top: 50%;
+    left: 50%;
+   
+    text-transform: translate(-50%,-50%);
+}
+span{
+    font-size: larger;
+    text-transform: uppercase;
+    animation: blink 2s linear infinite;
+    background: 	#000080;
+    color: white;
+    border-radius:25px;
+    padding: 5px;
+}
+@keyframes blink{
+    0%{opacity: 0;}
+    50%{opacity: .5;}
+    100%{opacity: 1;}
+}
+

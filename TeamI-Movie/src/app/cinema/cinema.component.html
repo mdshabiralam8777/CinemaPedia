@@ -1,0 +1,178 @@
+<div class="container bg-light p-3">
+  <h2 class="text-dark container font-weight-bolder">In Theater</h2><hr>
+ <section>
+  <mat-tab-group [backgroundColor]="'dark'" [color]="'warn'" >
+    
+    <mat-tab label="Popular Movies">
+      <div  class="swiper-container" [swiper]="config" >
+        <div class="swiper-wrapper" >
+          <div class="swiper-slide" *ngFor="let list of moviesList">
+            <div class="mb-2" style="width: 18rem;">
+              <img class="card-img-top" src="https://image.tmdb.org/t/p/w780{{list.poster_path}}" style="width: 250px; height: auto;" alt="Naruto">
+              <h3 class="card-title font-weight-bold text-success">{{list.title}} </h3>
+              <span class="font-weight-bold text-danger">Release Date:&nbsp;</span><span class="text-dark text-right small">&nbsp;&nbsp;{{list.release_date | date}}</span>
+          </div>
+          </div>
+        </div>
+        <div class="swiper-scrollbar"></div>
+        <div class="swiper-pagination"></div>
+        <!-- <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div> -->
+      </div>
+    </mat-tab>
+    
+    <mat-tab label="Top Rated Movies">
+      <div  class="swiper-container" [swiper]="config" >
+        <div class="swiper-wrapper" >
+          <div class="swiper-slide" *ngFor="let top of topRatedList">
+            <div class="mb-2" style="width: 18rem;">
+              <img class="card-img-top" src="https://image.tmdb.org/t/p/w780{{top.poster_path}}" style="width: 250px; height: auto;" alt="Naruto">
+              <h3 class="card-title font-weight-bold text-success">{{top.title}} </h3>
+              <span class="font-weight-bold text-danger">Release Date:&nbsp;</span><span class="text-dark text-right small">&nbsp;&nbsp;{{top.release_date | date}}</span>
+          </div>
+          </div>
+        </div>
+        <div class="swiper-scrollbar"></div>
+        <div class="swiper-pagination"></div>
+        <!-- <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div> -->
+      </div>
+    </mat-tab>
+    <mat-tab label="Now Playing Movies">
+      <div  class="swiper-container" [swiper]="config" >
+        <div class="swiper-wrapper" >
+          <div class="swiper-slide" *ngFor="let now of nowPlaying">
+            <div class="mb-2" style="width: 18rem;">
+              <img class="card-img-top" src="https://image.tmdb.org/t/p/w780{{now.poster_path}}" style="width: 250px; height: auto;" alt="Naruto">
+              <h3 class="card-title font-weight-bold text-success">{{now.title}} </h3>
+              <span class="font-weight-bold text-danger">Release Date:&nbsp;</span><span class="text-dark text-right small">&nbsp;&nbsp;{{now.release_date | date}}</span>
+          </div>
+          </div>
+        </div>
+        <div class="swiper-scrollbar"></div>
+        <div class="swiper-pagination"></div>
+        <!-- <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div> -->
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+ </section>
+  <br><br>
+ <!-- 
+   ON TV
+  -->
+  <section>
+    <h2 class="text-dark container font-weight-bolder">On TV</h2><hr>
+  <mat-tab-group [backgroundColor]="'dark'" [color]="'warn'">
+    
+    <mat-tab label="Currently Airing TV Shows">
+      <div  class="swiper-container" [swiper]="config" >
+        <div class="swiper-wrapper" >
+          <div class="swiper-slide" *ngFor="let list of onTheAir">
+            <div class="mb-2" style="width: 18rem;">
+              <img  *ngIf="list.poster_path" class="card-img-top" src="https://image.tmdb.org/t/p/w780{{list.poster_path}}" style="width: 250px; height: auto;" alt="ON TV">
+              <h3 class="card-title font-weight-bold text-success">{{list.name}} </h3>
+              <span class="font-weight-bold text-danger">First Air Date:&nbsp;</span><span class="text-dark text-right small">&nbsp;&nbsp;{{list.first_air_date | date}}</span>
+          </div>
+          </div>
+        </div>
+        <div class="swiper-scrollbar"></div>
+        <div class="swiper-pagination"></div>
+        <!-- <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div> -->
+      </div>
+    </mat-tab>
+    
+    <mat-tab label="Airing Today TV Shows">
+      <div  class="swiper-container" [swiper]="config" >
+        <div class="swiper-wrapper" >
+          <div class="swiper-slide" *ngFor="let top of onTvAirToday">
+            <div class="mb-2" style="width: 18rem;">
+              <img class="card-img-top" src="https://image.tmdb.org/t/p/w780{{top.poster_path}}" style="width: 250px; height: auto;" alt="Naruto">
+              <h3 class="card-title font-weight-bold text-success">{{top.name}} </h3>
+              <span class="font-weight-bold text-danger">First Air Date:&nbsp;</span><span class="text-dark text-right small">&nbsp;&nbsp;{{top.first_air_date | date}}</span>
+          </div>
+          </div>
+        </div>
+        <div class="swiper-scrollbar"></div>
+        <div class="swiper-pagination"></div>
+        <!-- <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div> -->
+      </div>
+    </mat-tab>
+    <mat-tab label="Popular TV Shows">
+      <div  class="swiper-container" [swiper]="config" >
+        <div class="swiper-wrapper" >
+          <div class="swiper-slide" *ngFor="let now of onTvPopular">
+            <div class="mb-2" style="width: 18rem;">
+              <img class="card-img-top" src="https://image.tmdb.org/t/p/w780{{now.poster_path}}" style="width: 250px; height: auto;" alt="Naruto">
+              <img class="card-img-top" *ngIf="!now.poster_path"  src="http://www.catedrauamfujitsu.es/wp-content/themes/invicta/styles/images/defaults/no_photo.jpg" class="movie-header-card" [alt]="now.title ? now.title : now.name">
+              <h3 class="card-title font-weight-bold text-success">{{now.name}} </h3>
+              <span class="font-weight-bold text-danger">First Air Date:&nbsp;</span><span class="text-dark text-right small">&nbsp;&nbsp;{{now.first_air_date | date}}</span>
+          </div>
+          </div>
+        </div>
+        <div class="swiper-scrollbar"></div>
+        <div class="swiper-pagination"></div>
+        <!-- <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div> -->
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+  </section>
+</div>
+<!-- <script src="../package/swiper-bundle.min.js"></script> -->
+<!-- onTvPopular -->
+<!-- 
+  http://via.placeholder.com/154x218?text=Not+avaliable
+  <div  class="swiper-container" [swiper]="config" >
+        <div class="swiper-wrapper" >
+          <div class="swiper-slide" *ngFor="let now of nowPlaying | slice:0:10">
+            <mat-card class="movie-card">
+              <img *ngIf="now.poster_path" mat-card-image src="https://image.tmdb.org/t/p/w300/{{now.poster_path}}">
+              <img *ngIf="!now.poster_path" mat-card-image src="http://www.catedrauamfujitsu.es/wp-content/themes/invicta/styles/images/defaults/no_photo.jpg" class="movie-header-card" [alt]="now.title ? now.title : now.name">
+            <mat-card-content>
+              <mat-card-title *ngIf="now.title">{{now.title}}</mat-card-title>
+              <mat-card-title *ngIf="now.name">{{now.name}}</mat-card-title>
+              <p *ngIf="now.release_date">
+                <strong style="color: #F44336;">Release Date: </strong>{{now.release_date | date}}
+              </p>
+              <p *ngIf="now.first_air_date">
+                <strong style="color: #F44336;">First Air Date: </strong>{{now.first_air_date | date}}
+              </p>
+            </mat-card-content>
+          </mat-card>
+          </div>
+        </div>
+        <div class="swiper-scrollbar"></div>
+        <div class="swiper-pagination"></div>
+       
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+ -->
+ <!-- <div class="text-center" *ngFor="let list of moviesList"> <img src="https://image.tmdb.org/t/p/original{{list.backdrop_path}}" alt="Naruto"></div> -->
+<!-- <p class="card-text">{{list.overview}}</p> -->
+<!-- 
+    Object look like this..
+topRatedList
+"popularity": 2627.575,
+"vote_count": 23,
+"video": false,
+"poster_path": "/ugZW8ocsrfgI95pnQ7wrmKDxIe.jpg",
+"id": 724989,
+"adult": false,
+"backdrop_path": "/86L8wqGMDbwURPni2t7FQ0nDjsH.jpg",
+"original_language": "en",
+"original_title": "Hard Kill",
+"genre_ids": [
+  28,
+  53
+],
+"title": "Hard Kill",
+"vote_average": 4.2,
+"overview": "The work of billionaire tech CEO Donovan Chalmers is so valuable that he hires mercenaries to protect it, and a terrorist group kidnaps his daughter just to get it.",
+"release_date": "2020-10-23"
+}
+<div><button><a href="https://www.20thcenturystudios.com/movies/fight-club"></a>Home Page</button></div>
+ -->

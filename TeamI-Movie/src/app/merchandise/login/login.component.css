@@ -1,0 +1,3 @@
+.btn-warning.disabled, .btn-warning:disabled {
+    cursor: not-allowed;
+}

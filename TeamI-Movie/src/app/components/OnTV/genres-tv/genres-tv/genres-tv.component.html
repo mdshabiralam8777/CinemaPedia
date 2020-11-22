@@ -1,0 +1,8 @@
+<div *ngIf="tvShow" class="padding-top-60 container">
+  <h1 class="bg-warning p-1 rounded text-center">{{title}}</h1>
+  <div class="center row p-3 bg-light " fxLayout='row wrap'>
+    <div class="col-3 pb-2" *ngFor="let tv of tvShow;">
+      <app-poster-card class="genre-tv" [model]="tv"></app-poster-card>
+    </div>
+  </div>
+</div>

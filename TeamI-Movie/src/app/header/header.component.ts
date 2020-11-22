@@ -11,5 +11,9 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  images = ['https://boldoutline.in/wp-content/uploads/2019/10/Web-Cover-99.jpg',
+            'https://s01.sgp1.digitaloceanspaces.com/large/815400-40525-zhvguqnirt-1472670203.jpg',
+            'https://www.filmcompanion.in/wp-content/uploads/2018/12/Film_Companion_Best-Of-2018_Top-12-Posters_Bollywood_lead_1.jpg'            
+];
 
 }

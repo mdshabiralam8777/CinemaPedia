@@ -1,0 +1,67 @@
+<div *ngIf="tvShow">
+    <div class="parrallax-content" [ngStyle]="{'background-image': 'linear-gradient(rgba(52,41,49,0.8), rgba(68,34,102,0.8)), url('+'https://image.tmdb.org/t/p/w1280'+tvShow.backdrop_path+')'}">
+      <!-- <div class="parrallax">
+      </div> -->
+      <div class="parallax-left-content mb-5 pb-5">
+        <section class="parallax-position pb-0 mb-0">
+          <div class="parallax-img-container">
+            <img src="https://image.tmdb.org/t/p/w500/{{tvShow?.poster_path}}" alt="" width="300px">
+          </div>
+          <div class="parallax-right-content"> <!--Title-->
+            <h2 class="text-danger">{{tvShow.title}}</h2>
+            <h4 class="text-warning">{{tvShow.vote_average}} <span><i class="far fa-star"></i></span></h4>
+            <div class="parallax-btn-container">
+              <button mat-mini-fab matTooltip="Soon" aria-label="Add Favorite Movie"><mat-icon>favorite</mat-icon></button>
+              <!-- <button mat-mini-fab matTooltip="Soon" aria-label="Add Star Movie"><mat-icon>star</mat-icon></button> -->
+              <button mat-mini-fab matTooltip="Soon" aria-label="Add Bookmark Movie"><mat-icon>bookmark</mat-icon></button>
+              <!-- <a href="javascript:void(0)" (click)="openDialog()" *ngIf="video"><mat-icon>play_arrow</mat-icon> Play Trailer</a> -->
+            </div>
+            <div>
+              <button mat-raised-button color="accent" aria-label="Trailer" (click)="openDialog()"><mat-icon class="icon-colored" style="background: white; border-radius: 50%;">play_arrow</mat-icon> Watch Trailer</button>
+            </div>
+            <h3 class="text-light font-weight-bold pt-1 pb-0 mb-0 h3">Overview</h3>
+            <p class="text-light">{{tvShow.overview}}</p>
+            <h3 class="text-danger font-weight-bold pt-1 pb-0 mb-0">Categories</h3>
+            <a *ngFor="let genre of tvShow.genres" routerLink="/genres-tv/{{genre.id}}/{{genre.name}}">
+              <button mat-raised-button color="accent">{{genre.name}}</button>
+            </a>
+          </div>
+        </section>
+        <div class="top-billed-cast pt-0 mt-0 mb-5">
+          <p class="text-dark bg-warning rounded pt-0 mt-0">Top Billed Cast</p>
+          <div style="display: flex">
+            <div *ngFor="let actor of cast; let last = last" [ngStyle]="{'border-right': last !== true ? '1px solid #ffffff75' : ''}" style="width: 20%;">
+              <a routerLink="/actor/{{actor?.id}}">
+                <div style="display: inline-flex; align-items: center;">
+                  <img mat-card-image src="https://image.tmdb.org/t/p/w500/{{actor?.profile_path}}">
+                  <div>
+                    <small style="color: #F44336; font-weight: 500">{{actor.character}}</small>
+                    <p style="margin: 0; font-size: 14px;">{{actor.name}}</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container py-4">
+  
+      <div *ngIf="similarShow" class="similar-movies pt-2">
+        <h1 class="bg-warning p-1 rounded text-center">Recommended Show</h1>
+        <div style="text-align:center;">
+          <span *ngFor="let tvShow of similarShow;">
+            <app-poster-card [model]="tvShow" class="recommended-poster" (click)="upOnRouting()"></app-poster-card>
+          </span>
+        </div>
+      </div> <!--End Similar Movies-->
+  
+    </div>
+  </div>
+
+<!-- Trailer Dialoge box -->
+<div *ngIf="isLoading" style="margin-top: 30%">
+  <div class="loading">
+    <h4>Loading</h4>
+  </div>
+</div>

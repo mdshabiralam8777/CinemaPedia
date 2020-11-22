@@ -1,0 +1,26 @@
+<section id="home-header">
+    <div class="container-fluid px-3 row ">
+        <div class="col-3">
+        </div>
+        <div class="col-2 mt-5 pl-5">
+            <div class="p-1 rounded">
+                <mat-form-field class="bg-warning rounded p-4">
+                    <mat-label class="text-dark font-weight-bold p-1">Language based movies</mat-label>
+                    <mat-select [(ngModel)]="currentLanguage" (ngModelChange)='onLangSelection($event)'>
+                        <mat-option *ngFor="let food of foods" [value]="food.value" class="bgwarning">
+                            {{food.viewValue}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="col-7 mt-5">
+            <div class="container row px-5" *ngIf="LangBasedMovies?.length" routerLinkActive="active"
+                routerLink="/lang">
+                <div class="col-3 pb-2" *ngFor="let lang of LangBasedMovies">
+                    <app-poster-card [model]="lang"></app-poster-card>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
