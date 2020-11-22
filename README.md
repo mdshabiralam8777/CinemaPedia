@@ -4,7 +4,7 @@ This project has mainly 3 main module/part
     1.you can search any movies and see it details same goes for TV-Series
     2.See Movies details based on language
     3.See movies/TV-series based on the Genres
-    4.Watch trending tarilers as well as whatever you select from the above 3 mentioned options
+    4.Watch trending trailers as well as the trailers of whatever you select from the above 3 mentioned options 
     
   b. Indian Cinema(State Film industries)
     1.Bollywood
