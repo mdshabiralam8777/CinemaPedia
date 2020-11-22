@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule} from './app-routing.module';
 import { AppComponent } from './app.component';
+<<<<<<< HEAD
 import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { FooterComponent } from './merchandise/footer/footer.component';
 import { HeaderComponent } from './header/header.component';
@@ -242,6 +243,16 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     DirDetailsMollyComponent,
     DirBollyComponent,
     DirDetailsBollyComponent,
+=======
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HeaderComponent } from './header/header.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    HeaderComponent
+>>>>>>> 9d44fad31604eb9fb92b69dfc764cfec83b0d06c
   ],
   
   imports: [
@@ -249,6 +260,7 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     NgbModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+<<<<<<< HEAD
     NgImageSliderModule,
     HttpClientModule,
     ReactiveFormsModule,
@@ -325,6 +337,9 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
       useValue: DEFAULT_SWIPER_CONFIG
     }
 
+=======
+    NgbModule
+>>>>>>> 9d44fad31604eb9fb92b69dfc764cfec83b0d06c
   ],
   bootstrap: [AppComponent],
   
