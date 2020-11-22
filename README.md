@@ -20,7 +20,8 @@ This project has mainly 3 main module/part
         in simple terms this module has almost all the E-Commerce funtionalities
         
   Some of the part of this project is under progress:
-  ------------------------------------------Project Details End Here----------------------------------------
+  
+  #------------------------------------------Project Details End Here----------------------------------------
   # CinemaPedia
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.3.
