@@ -20,6 +20,8 @@ This project has mainly 3 main module/part
         in simple terms this module has almost all the E-Commerce funtionalities
         
   Some of the part of this project is under progress:
+  
+  
   ------------------------------------------Project Details End Here----------------------------------------
   # CinemaPedia
 
