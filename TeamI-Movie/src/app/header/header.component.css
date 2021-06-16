@@ -1,12 +1,8 @@
 .total{
-<<<<<<< HEAD
     background-color: rgb(0, 0, 7);
 }
 p{
     color: white;
-=======
-    background-color: burlywood;
->>>>>>> 9d44fad31604eb9fb92b69dfc764cfec83b0d06c
 }
 
 .im1{
@@ -25,19 +21,12 @@ p{
     margin-top: 10px;
     box-sizing: border-box;
     border-radius: 50%;
-<<<<<<< HEAD
     color: white;
-=======
->>>>>>> 9d44fad31604eb9fb92b69dfc764cfec83b0d06c
 }
 .line{
     display: inline;
     font-family: 'Sofia';font-size: 50px;
-<<<<<<< HEAD
     color: rgb(148, 33, 5);
-=======
-    color: rgb(240, 57, 11);
->>>>>>> 9d44fad31604eb9fb92b69dfc764cfec83b0d06c
 }
 .form-inline{
     display: inline;
@@ -45,11 +34,7 @@ p{
     box-sizing: border-box;
 }
 .headline{
-<<<<<<< HEAD
     background-color: rgb(255, 238, 5);
-=======
-    background-color: rgb(243, 178, 0);
->>>>>>> 9d44fad31604eb9fb92b69dfc764cfec83b0d06c
     height: 20%;
 
 }
